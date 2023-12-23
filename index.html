@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bookmark System</title>
+    <link rel="shortcut icon" href="imgs/pngwing.com.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <main>
+        <h1 class="text-center my-5">bookmarker</h1>
+        <section>
+            <div class="container position-relative">
+                <div class="w-75 mx-auto">
+                    <h2 class="text-center"><i class="fa-solid fa-bookmark text-primary"></i>bookmark your favorite sites!<i class="fa-solid fa-bookmark text-primary"></i></h2>
+                    <div class="form-group mb-4">
+                        <label for="site-name" class="mb-2 fs-4"><i class="fa-solid fa-bookmark me-2"></i>site name</label>
+                        <input type="text" id="site-name" class="form-control sitename mb-2" placeholder="Enter Site Name from 1 to 10 chars">
+                        <p class="d-none text-danger" id="invalidname">Invalid site name!</p>
+                    </div>
+                    <div class="form-group mb-5">
+                        <label for="site-url" class="mb-2 fs-4"><i class="fa-solid fa-link me-2"></i>site url</label>
+                        <input type="text" id="site-url" class="form-control siteurl mb-2" placeholder="Enter site URL">
+                        <p class="d-none text-danger" id="invalidurl">Invalid site url!</p>
+                    </div>
+                    <div class="submit-btn text-center mb-5"><button class="btn btn-primary btn-lg submitBtn">Submit</button></div>
+                    <table class="table table-dark text-center">
+                        <thead>
+                            <th>index</th>
+                            <th>website name</th>
+                            <th>visit</th>
+                            <th>delete</th>
+                        </thead>
+                        <tbody class="tableData">
+                        </tbody>
+                    </table>
+                </div>
+                <div class="invalid-inputs position-absolute w-50 translate-middle top-50 start-50 p-5 d-none">
+                    <div class="invalid-input-icons d-flex align-items-center justify-content-between mb-4">
+                        <div class="icons-left">
+                            <i class="fa-solid fa-circle text-danger"></i>
+                            <i class="fa-solid fa-circle text-warning"></i>
+                            <i class="fa-solid fa-circle text-primary"></i>
+                        </div>
+                        <div class="icons-right">
+                            <i class="fa-solid fa-x text-white close-icon fs-5" onclick="closeDiv()"></i>
+                        </div>
+                    </div>
+                    <div class="invalid-inputs-text">
+                        <p class="fs-3">site name or url is not valid, please follow the rules below:</p>
+                        <p class="fs-5">site name must contain atleast 3 chars & max 100 chars</p>
+                        <p class="fs-5">site url atleast starts with <span class="fw-bold">WWW</span> or <span class="fw-bold text-lowercase">https://</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    color: white;
+    text-transform: capitalize;
+}
+.table>:not(caption)>*>* {
+    background-color: black;
+}
+.invalid {
+    border: 2px solid red !important;
+}
+.invalid-inputs {
+    background-color: #0D1117;
+    border-radius: 5px;
+}
+.close-icon {
+    cursor: pointer;
+}
+
